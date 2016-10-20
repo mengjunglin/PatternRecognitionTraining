@@ -14,6 +14,7 @@ public class GameScript : MonoBehaviour {
 	public List<GameObject> lstShapeObj;
 	public Text txtTarget;
 	public Text txtScore;
+	public Text txtObjective;
 	public Sprite spCorrect;
 	public Sprite spIncorrect;
 
@@ -25,6 +26,7 @@ public class GameScript : MonoBehaviour {
 		targetIndex = Random.Range (0, 5);
 		txtTarget.text = lstShape[targetIndex];
 		txtScore.text = 0.ToString();
+		txtObjective.text = FrameworkCore.currentContent.getTerm();
 
 		StartCoroutine(Spawnning());
 	}
@@ -77,7 +79,7 @@ public class GameScript : MonoBehaviour {
 			if (spawnDictionary [go])
 				score++;
 			else
-				Debug.Log ("Incorrect");
+				score--;
 		}
 	}
 }
