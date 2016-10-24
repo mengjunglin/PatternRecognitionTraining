@@ -11,6 +11,11 @@ public class ChemistryContent : Content
 		description = "Some description about Chemistry!";
 	}
 
+	public string getName()
+	{
+		return name;
+	}
+
 	public override char getItem()
 	{
 		return nums[Random.Range(0, nums.Length)];
