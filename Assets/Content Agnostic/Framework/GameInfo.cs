@@ -15,5 +15,5 @@ public static class GameInfo
 
     // Change each of these to be one of your content objects. If you only have one, leave the second alone for now.
 	public static Content contentOne = new GeometryContent();
-    public static Content contentTwo = new NoContent("Placeholder2", "This is the first empty content. Replace it with your second content.");
+	public static Content contentTwo = new ChemistryContent();
 }
